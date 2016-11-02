@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+
+<!--META-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>AZAHAR COFFEE</title>
+
+<!--STYLESHEETS-->
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+
+<!--SCRIPTS-->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
+<!--Slider-in icons-->
+<script type="text/javascript">
+$(document).ready(function() {
+	$(".username").focus(function() {
+		$(".user-icon").css("left","-48px");
+	});
+	$(".username").blur(function() {
+		$(".user-icon").css("left","0px");
+	});
+	
+	$(".password").focus(function() {
+		$(".pass-icon").css("left","-48px");
+	});
+	$(".password").blur(function() {
+		$(".pass-icon").css("left","0px");
+	});
+});
+</script>
+
+<script type="text/javascript" language="javascript">
+
+function ValidarUsu(campo, caract_extra, nulo) {
+  if (nulo == 1 && campo == "") {
+    alert("ERROR: No puede dejar este campo vacio")
+    return false
+  }
+
+  var ubicacion
+  var enter = "\n"
+  var caracteres = "abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ0123456789 " + String.fromCharCode(13) + enter + caract_extra
+
+  var contador = 0
+  for (var i=0; i < campo.length; i++) {
+    ubicacion = campo.substring(i, i + 1)
+    if (caracteres.indexOf(ubicacion) != -1) {
+      contador++
+    } else {
+      alert("ERROR: El Usuario o Clave contiene Caracteres No Permitidos")
+      return false
+    }
+  }  
+  
+}
+
+function ValidarPass(campo, caract_extra, nulo) {
+  if (nulo == 1 && campo == "") {
+    alert("ERROR: No puede dejar este campo vacio")
+    return false
+  }
+
+  var ubicacion
+  var enter = "\n"
+  var caracteres = "abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ0123456789 " + String.fromCharCode(13) + enter + caract_extra
+
+  var contador = 0
+  for (var i=0; i < campo.length; i++) {
+    ubicacion = campo.substring(i, i + 1)
+    if (caracteres.indexOf(ubicacion) != -1) {
+      contador++
+    } else {
+      alert("ERROR: El Usuario o Clave contiene Caracteres No Permitidos")
+      return false
+    }
+  }  
+  
+}
+
+</script>
+
+</head>
+<body>
+
+<!--WRAPPER-->
+<div id="wrapper">
+
+	<!--SLIDE-IN ICONS-->
+    <div class="user-icon"></div>
+    <div class="pass-icon"></div>
+    <!--END SLIDE-IN ICONS-->
+
+<!--LOGIN FORM-->
+<form name="login-form" class="login-form" action="index.php" method="post" onSubmit="return ValidarUsu(this.username.value, 'c', 0)">
+
+	<!--HEADER-->
+  <center>
+    <div class="header">
+    <!--TITLE--><IMG SRC="images\logo_Azahar.png"><!--END TITLE-->
+	<BR><BR>
+    <!--DESCRIPTION--><span><h3>Ingrese su Usuario y Contraseña.<h3></span><!--END DESCRIPTION-->
+    </div>
+    <!--END HEADER-->
+	</center>
+	<!--CONTENT-->
+    <div class="content">
+	<!--USERNAME--><input name="username" type="text" class="input username" value="Usuario" onfocus="this.value=''" /><!--END USERNAME-->
+    <!--PASSWORD--><input name="password" type="password" class="input password" value="Password" onfocus="this.value=''" /><!--END PASSWORD-->
+    </div>
+    <!--END CONTENT-->
+    
+    <!--FOOTER-->
+    <div class="footer">
+    <!--LOGIN BUTTON-->
+    
+          <input type="submit" name="submit" value="Ingresar" class="button" />
+       
+
+          <?php   
+
+            error_reporting(0);
+            if (isset($_POST['submit'] )) { 
+                     require ("index_1.php");
+            }   
+          ?>     
+
+
+          <!--END LOGIN BUTTON-->
+    </div>
+
+
+    <!--END FOOTER-->
+
+</form>
+<!--END LOGIN FORM-->
+
+</div>
+<!--END WRAPPER-->
+
+<!--GRADIENT--><div class="gradient"></div><!--END GRADIENT-->
+
+
+
+</body>
+</html>
