@@ -1,6 +1,6 @@
 <?php
 
-	$idFinca = $_POST['idFinca'];
+	$idFinca = "NULL";
 	$Altitud = $_POST['Altitud'];
 
 	$Nombre = $_POST['Nombre'];
@@ -12,10 +12,11 @@
 	$Telefono = $_POST['Telefono'];
 	$tipoFermentacion = $_POST['tipoFermentacion'];
 
-	$Direccion = $_POST['Direccion'];                                              
+	$Direccion = $_POST['Direccion']; 
+	$Fundacion = $_POST['Fundacion'];                                             
 
 	$Departamento = $_POST['Departamento'];
-	$tiempoFermentación = $_POST['tiempoFermentación'];
+	$tiempoFermentacion = $_POST['tiempoFermentacion'];
 
 	$Municipio = $_POST['Municipio'];
 	$Hombres = $_POST['Hombres'];
@@ -27,28 +28,27 @@
 	$Productor = $_POST['Productor'];
 	$Administrador = $_POST['Administrador'];
 
-	$creacion = "1980-01-01";
-	$area = 1;
-	$history="historia";
+	
+	
+	$history="FINCA CAFETERA";
+	echo ($tipoFermentacion);
+	echo($Nombre);
 
-
-
-
-	$verifica = strlen($idFinca) * strlen($Nombre) * strlen($Secado) * strlen($Telefono) * strlen($Departamento)* strlen($Municipio)* strlen($Hombres)* strlen($Mujeres)* strlen($Productor)*strlen($Direccion);
+	$verifica = strlen($Nombre)*strlen($Fundacion)*strlen($Direccion)*strlen($Departamento)*strlen($Municipio)*strlen($Area)*strlen($Altitud)*strlen($tiempoSecado)*strlen($tiempoFermentacion)*strlen($Hombres)*strlen($Mujeres)*strlen($Productor);
 
 	if ($verifica>0) {
 		    include 'conect.php';			
 			$conexion = mysql_connect($host, $user, $pwd) or die ("Error de conexion.");
 			mysql_select_db($db,$conexion) or die ("no se pudo conectar a la bd");
 			
-			mysql_query("INSERT INTO fincas VALUES ('$idFinca','$Nombre','$Administrador', '$Direccion', '$Telefono','$creacion', '$Departamento', '$Municipio', '$Vereda', '$area', '$Altitud', '$Secado', '$tiempoSecado', '$tipoFermentacion', '$tiempoFermentación', '$Hombres', '$Mujeres','$history', '$Productor')");
+			mysql_query("INSERT INTO fincas VALUES ( NULL,'$Nombre','$Administrador', '$Direccion', '$Telefono','$Fundacion', '$Departamento', '$Municipio', '$Vereda', '$Area', '$Altitud', '$Secado', '$tiempoSecado', '$tipoFermentacion', '$tiempoFermentación', '$Hombres', '$Mujeres','$history', '$Productor')");
 
-			echo "<b>"."Se ha guardado exitosamente"."</b>";
+			echo "<center>"."<b>"."Se ha guardado exitosamente"."</b>"."</center>";
 
 		}	
 		else {
 			
-			echo "<b>"." (*) Por favor ingrese todos los valores obligatorios"."</b>";
+			echo "<center>"."<b>"."<font color=red>"." (*) Estos campos son Obligatorios"."</font>"."</b>"."</center>";
 		}
 	
 

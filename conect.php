@@ -7,7 +7,7 @@
 		//Contraseña
 		$pwd = "12345";
 		//Base de datos
-		$db = "azahar";
+		$db = "azaharBD";
  	
 
 ?>
