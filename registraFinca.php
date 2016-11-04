@@ -8,159 +8,156 @@
 	 <link href="http://getbootstrap.com/2.3.2/assets/css/bootstrap.css" rel="stylesheet">
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
-    <center><a href="http://localhost/azahar/"><img src="http://azaharcoffee.com/sites/default/files/logo.png"></a> </center>
+    <center><a href="http://localhost/azahar/index_1.php"><img src="http://azaharcoffee.com/sites/default/files/logo.png"></a> </center>
 	<center><b><h2><i>AZAHAR COFFEE</i></h2></b></center>
 	<center><h4>Ingresa los datos de tu finca</h4> </center>
+	<div class="container">
+		<form method="POST" action="" />
+		     	<table >
+		     		<tr>
+		     				<td>
+		     					<label for="idFinca"><b>(*)Id Finca:</b></label>
+		     				</td>
 
-	<br>
+		     				<td>
+		     					<input type="text" name="idFinca" class="form-control" id="idFinca" />&emsp;&emsp;&emsp;
+		     				</td>
 
-	<form method="POST" action="" />
-	     	<table>
-	     		<tr>
-	     				<td>
-	     					<b>(*)id Finca:</b>
-	     				</td>
+		     				<td>
+		     					<label for id="Altitud"><b>Altitud (metros):</b></label>
+		     				</td>
 
-	     				<td>
-	     					<input type="name" name="idFinca" />
-	     				</td>
+		     				<td>
+		     					<input type="text" name="Altitud" class="form-control" id="Altitud" />
+		     				</td>
+		     		<tr>
+		     				<td>
+		     					<label for id="Nombre"><b>(*)Nombre:</b></label>
+		     				</td>
+		     				<td>
+		     					<input type="text" name="Nombre" class="form-control" id="Nombre" />
+		     				</td>
+		     				<td>
+		     					<label for id="Secado"><b>(*)Tipo de secado:</b></label>
+		     				</td>
+		     				<td>
+		     					<input type="text" name="Secado" class="form-control" id="Secado" />
+		     				</td>
+		     			</tr>	
+		     		<tr>
+		     				<td>
+		     					<label for id="Fundación"><b>Fecha de Fundación:</b></label>
+		     				</td>
+		     				<td>
+		     					<input type="date" name="Fundacion" class="form-control" id="Fundacion" />
+		     				</td>
+		     				<td>
+		     					<label for id="tiempoSecado"><b>Tiempo de secado (# dias):</b></label>
+		     				</td>
+		     				<td>
+		     					<input type="text" name="tiempoSecado" class="form-control" id="tiempoSecado" />
+		     				</td>
+		     		</tr>
+		     		<tr>
+		     				<td>
+		     					<label for id="Telefono"><b>(*)Telefono Finca:</b></label>
+		     				</td>
+		     				<td>
+		     					<input type="text" name="Telefono" class="form-control" id="Telefono" />
+		     				</td>
+		     				<td>
+		     					<label for id="tiempoFermentación"><b>Tipo de fermentación:</b></label>
+		     				</td>
+		     				<td>
+		     					<input type="text" name="tipoFermentacion" class="form-control" id="tipoFermentacion" />
+		     				</td>
+		     		</tr>
 
-	     				<td>
-	     					<b>Altitud:</b>
-	     				</td>
-
-	     				<td>
-	     					<input type="name" name="Altitud" />
-	     				</td>
-	     		<tr>
-	     				<td>
-	     					<b>(*)Nombre:</b>
-	     				</td>
-	     				<td>
-	     					<input type="name" name="Nombre" />
-	     				</td>
-	     				<td>
-	     					<b>(*)Tipo de secado:</b>
-	     				</td>
-	     				<td>
-	     					<input type="name" name="Secado" />
-	     				</td>
-	     			</tr>	
-	     		<tr>
-	     				<td>
-	     					<b>Fecha de Fundación:</b>
-	     				</td>
-	     				<td>
-	     					<input type="date" name="Fundacion" />
-	     				</td>
-	     				<td>
-	     					<b>Tiempo de secado (dias):</b>
-	     				</td>
-	     				<td>
-	     					<input type="name" name="tiempoSecado" />
-	     				</td>
-	     		</tr>
-	     		<tr>
-	     				<td>
-	     					<b>(*)Telefono Finca:</b>
-	     				</td>
-	     				<td>
-	     					<input type="name" name="Telefono" />
-	     				</td>
-	     				<td>
-	     					<b>Tipo de fermentación:</b>
-	     				</td>
-	     				<td>
-	     					<input type="name" name="tipoFermentacion" />
-	     				</td>
-	     		</tr>
-
-	     		<tr>
-	     				<td>
-	     					<b>(*)Dirección:</b>
-	     				</td>
-	     				<td>
-	     					<input type="name" name="Direccion" />
-	     				</td>
-	     				<td>
-	     					<b>Tiempo de fermentación (dias):</b>
-	     				</td>
-	     				<td>
-	     					<input type="name" name="tiempoFermentación" />
-	     				</td>
-	     		</tr>	
-	     	    <tr>
-	     				<td>
-	     					<b>(*)Departamento:</b>
-	     				</td>
-	     				<td>
-	     					<input type="name" name="Departamento" />
-	     				</td>
-	     				<td>
-	     					<b>(*)# Trabajadores Hombres:</b>
-	     				</td>
-	     				<td>
-	     					<input type="name" name="Hombres" />
-	     				</td>	     				
-	     		</tr>	
-	     		<tr>
-	     				<td>
-	     					<b>(*)Municipio</b>
-	     				</td>
-	     				<td>
-	     					<input type="name" name="Municipio" />
-	     				</td>
-	     				<td>
-	     					<b>(*)# Trabajadoras Mujeres:</b>
-	     				</td>
-	     				<td>
-	     					<input type="name" name="Mujeres" />
-	     				</td>
-	     		</tr>	
-	     				<tr>
-	     					<td>
-	     						<b>(*)Vereda:</b>
-	     					</td>
-	     					<td>
-	     							<input type="name" name="Vereda" />
-	     					</td>
-	     					<td>
-	     						<b>(*)Productor:</b>
-	     					</td>
-	     					<td>	
-	     				
-	     						<input type="name" name="Productor" />		
-	     					
-	     					</td>
+		     		<tr>
+		     				<td>
+		     					<label for id="Direccion"><b>(*)Dirección:</b></label>
+		     				</td>
+		     				<td>
+		     					<input type="text" name="Direccion" class="form-control" id="Direccion" />
+		     				</td>
+		     				<td>
+		     					<label for id="tiempoFermentación"><b>Tiempo de fermentación (dias):</b></label>
+		     				</td>
+		     				<td>
+		     					<input type="text" name="tiempoFermentación" class="form-control" id="tiempoFermentación" />
+		     				</td>
+		     		</tr>	
+		     	    <tr>
+		     				<td>
+		     					<label for id="Direccion"><b>(*)Departamento:</b></label>
+		     				</td>
+		     				<td>
+		     					<input type="text" name="Departamento" class="form-control" id="Departamento" />
+		     				</td>
+		     				<td>
+		     					<label for id="Hombres"><b>(*)# Trabajadores Hombres:</b></label>
+		     				</td>
+		     				<td>
+		     					<input type="text" name="Hombres" class="form-control" id="Hombres" />
+		     				</td>	     				
+		     		</tr>	
+		     		<tr>
+		     				<td>
+		     					<label for id="Municipio"><b>(*)Municipio</b></label>
+		     				</td>
+		     				<td>
+		     					<input type="text" name="Municipio" class="form-control" id="Municipio" />
+		     				</td>
+		     				<td>
+		     					<label for id="Mujeres"><b>(*)# Trabajadoras Mujeres:</b></label>
+		     				</td>
+		     				<td>
+		     					<input type="text" name="Mujeres" class="form-control" id="Mujeres" />
+		     				</td>
+		     		</tr>	
+		     				<tr>
+		     					<td>
+		     						<label for id="Vereda">(*)Vereda:</b></label><b>
+		     					</td>
+		     					<td>
+		     							<input type="text" name="Vereda" class="form-control" id="Vereda" />
+		     					</td>
+		     					<td>
+		     						<label for id="Productor"><b>(*)Productor:</b></label>
+		     					</td>
+		     					<td>			     				
+		     						<input type="text" name="Productor" class="form-control" id="Productor" />		
+		     					
+		     					</td>
 
 
-	     		</tr>
-	     		<tr>
-	     			<td>
-	     				<b>Area (mts2):</b>
-	     			</td>
-	     			<td>
-	     				<input type="name" name="Area" />
-	     			</td>
+		     		</tr>
+		     		<tr>
+		     			<td>
+		     				<label for id="Area"><b>Area (mts2):</b></label>
+		     			</td>
+		     			<td>
+		     				<input type="text" name="Area" class="form-control" id="Area" />
+		     			</td>
 
-	     			<td>
-	     				<b>Nombre del Administrador:</b>
-	     			</td>
-	     			<td>
-	     				<input type="name" name="Administrador" />
-	     			</td>
+		     			<td>
+		     				<label for id="Administrador"><b>Nombre del Administrador:</b></label>
+		     			</td>
+		     			<td>
+		     				<input type="text" name="Administrador" class="form-control" id="Administrador" />
+		     			</td>
 
-	     		</tr>	
-	     		<br>
-	     		<br>				
+		     		</tr>	
+		     		<br>
+		     		<br>				
 
-	     </table>
-	     		<center>
-	     		<input type="submit" name="guardarFinca" value="Guardar" class="btn btn-info" >	
+		     </table>
+		     		<center>
+		     		<input type="submit" name="guardarFinca" value="Guardar" class="btn btn-info" >	
 
-	     		</center>
-	     </form>
-
+		     		</center>
+		     </form>
+</div>
 	  
 
 		<?php	  

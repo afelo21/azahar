@@ -92,7 +92,7 @@ function ValidarPass(campo, caract_extra, nulo) {
     <!--END SLIDE-IN ICONS-->
 
 <!--LOGIN FORM-->
-<form name="login-form" class="login-form" action="index.php" method="post" onSubmit="return ValidarUsu(this.username.value, 'c', 0)">
+<form name="login-form" class="login-form" action="index_1.php" method="post" onSubmit="return ValidarUsu(this.username.value, 'c', 0)">
 
 	<!--HEADER-->
   <center>
@@ -116,17 +116,7 @@ function ValidarPass(campo, caract_extra, nulo) {
     
           <input type="submit" name="submit" value="Ingresar" class="button" />
        
-
-          <?php   
-
-            error_reporting(0);
-            if (isset($_POST['submit'] )) { 
-                     require ("index_1.php");
-            }   
-          ?>     
-
-
-          <!--END LOGIN BUTTON-->
+         <!--END LOGIN BUTTON-->
     </div>
 
 
