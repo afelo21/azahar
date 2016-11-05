@@ -27,12 +27,9 @@
 	$Area = $_POST['Area'];
 	$Productor = $_POST['Productor'];
 	$Administrador = $_POST['Administrador'];
+	
 
-	
-	
 	$history="FINCA CAFETERA";
-	echo ($tipoFermentacion);
-	echo($Nombre);
 
 	$verifica = strlen($Nombre)*strlen($Fundacion)*strlen($Direccion)*strlen($Departamento)*strlen($Municipio)*strlen($Area)*strlen($Altitud)*strlen($tiempoSecado)*strlen($tiempoFermentacion)*strlen($Hombres)*strlen($Mujeres)*strlen($Productor);
 
@@ -41,9 +38,9 @@
 			$conexion = mysql_connect($host, $user, $pwd) or die ("Error de conexion.");
 			mysql_select_db($db,$conexion) or die ("no se pudo conectar a la bd");
 			
-			mysql_query("INSERT INTO fincas VALUES ( NULL,'$Nombre','$Administrador', '$Direccion', '$Telefono','$Fundacion', '$Departamento', '$Municipio', '$Vereda', '$Area', '$Altitud', '$Secado', '$tiempoSecado', '$tipoFermentacion', '$tiempoFermentación', '$Hombres', '$Mujeres','$history', '$Productor')");
+			mysql_query("INSERT INTO fincas VALUES ( NULL,'$Nombre','$Administrador', '$Direccion','$Telefono','$Fundacion',     '$Departamento', '$Municipio', '$Vereda', '$Area', '$Altitud', '$Secado', '$tiempoSecado', '$tipoFermentacion', '$tiempoFermentacion', '$Hombres', '$Mujeres','$history', '$Productor')");
 
-			echo "<center>"."<b>"."Se ha guardado exitosamente"."</b>"."</center>";
+			echo "<center>"."<b>"."<font color=green>"."Se ha guardado exitosamente"."</font>"."</b>"."</center>";
 
 		}	
 		else {

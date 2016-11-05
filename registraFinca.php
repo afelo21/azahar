@@ -40,7 +40,12 @@
 		     					<label for id="Secado"><b>Tipo de secado:</b></label>
 		     				</td>
 		     				<td>
-		     					<input type="text" name="Secado" class="form-control" id="Secado" />
+		     					<select name="Secado" type = "text" id="Secado">
+									   	   <option selected value="NO DEF"> Elige una opción </option>
+									       <option value='AL SOL'>AL SOL</option> 
+									       <option value='A LA SOMBRA'>A LA SOMBRA</option> 
+									    
+							   </select>
 		     				</td>
 		     			</tr>	
 		     		<tr>
@@ -67,24 +72,29 @@
 		     				<td>
 		     					<label for id="tipoFermentacion"><b>Tipo de fermentación:</b></label>
 		     				</td>
-		     				<td>
-								<input type="text" name="tipoFermentacion" class="form-control" id="tipoFermentacion" />
+		     				<td> 		     				
+								<select name="tipoFermentacion" type = "text" id="tipoFermentacion">
+									   	   <option selected value="NO DEF"> Elige una opción </option>
+									       <option value='NORMAL'>NORMAL</option> 
+									       <option value='ANORMAL'>ANORMAL</option> 
+									    
+							   </select>
 
 		     				</td>
 		     		</tr>
 
 		     		<tr>
 		     				<td>
-		     					<label for id="Direccion"><b>(*)Departamento:</b></label>
+		     					<label for id="Departamento"><b>(*)Departamento:</b></label>
 		     				</td>
 		     				<td>
 		     					<input type="text" name="Departamento" class="form-control" id="Departamento" />
 		     				</td>
 		     				<td>
-		     					<label for id="tiempoFermentación"><b>(*)Tiempo de fermentación (# dias):</b></label>
+		     					<label for id="tiempoFermentacion"><b>(*)Tiempo de fermentación (# dias):</b></label>
 		     				</td>
 		     				<td>
-		     					<input type="text" name="tiempoFermentación" class="form-control" id="tiempoFermentación" />
+		     					<input type="text" name="tiempoFermentacion" class="form-control" id="tiempoFermentacion" />
 		     				</td>
 		     		</tr>	
 		     	    <tr>
