@@ -1,3 +1,7 @@
+<!DOCTYPE html>
+<html>
+<body>
+
 <?php
  		
  		// Conexion a la base de datos
@@ -9,3 +13,6 @@
 		//Base de datos
 		$db = "azaharBD";
  	?>
+
+</body>
+</html>
