@@ -31,7 +31,7 @@
 
 
 				<center> 
-					<form action = "creaCultivo.php" method = "post">
+					<form action = "consultarFincas.php" method = "post">
 						<input type = "submit" class="btn btn-info" value = "Crear Cultivo">
 					</form>
 				</center>
