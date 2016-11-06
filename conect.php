@@ -8,6 +8,4 @@
 		$pwd = "12345";
 		//Base de datos
 		$db = "azaharBD";
- 	
-
-?>
+ 	?>
