@@ -50,12 +50,12 @@
 
 						if (isset($_POST['guardarVariedad'] )) {							
 
-							require ("crearVariedad.php");
+							require 'crearVariedad.php';
 						}	
 
 						if (isset($_POST['listarVariedades'] )) {							
 
-							require ("listarVariedades.php");
+							require 'listarVariedades.php';
 						}	
 
 						
@@ -112,7 +112,7 @@
 
 						if (isset($_POST['crearProductor'] )) {							
 
-							require ("crearProductor.php");
+							require 'crearProductor.php';
 						}		
 		?>		
 	    

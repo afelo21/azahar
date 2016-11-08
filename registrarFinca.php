@@ -1,3 +1,7 @@
+<!DOCTYPE html>
+<html>
+<body>
+
 <?php
 
 	$idFinca = "NULL";
@@ -73,3 +77,8 @@
 					
 
 ?>
+
+</body>
+</html>
+
+

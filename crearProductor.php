@@ -1,3 +1,7 @@
+<!DOCTYPE html>
+<html>
+<body>
+
 <?php
 	$idProductor = $_POST['idProductor'];
 	$Nombre = $_POST['Nombre'];
@@ -23,3 +27,10 @@
 	
 
 ?>
+
+</body>
+</html>
+
+
+
+
