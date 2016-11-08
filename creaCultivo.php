@@ -8,9 +8,6 @@ $resultado=mysql_query($consulta);
 
 ?>
 
-
-
-
 <!DOCTYPE html>
 <html>
 
@@ -90,7 +87,7 @@ $resultado=mysql_query($consulta);
                 <tr>
 
                     <td>
-                        <label for id="variedad"><b>VAriedad del café:</b></label>
+                        <label for id="variedad"><b>Variedad del café:</b></label>
                     </td>
                     <td>
                         <select name="variedad" type = "text" id="variedad">
@@ -125,6 +122,7 @@ $resultado=mysql_query($consulta);
 
 						if (isset($_POST['creaCultivo'] )) {							
 
+							
 							require ("crearCultivo.php");
 						}		
 		?>

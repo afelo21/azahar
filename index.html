@@ -114,7 +114,7 @@ function ValidarPass(campo, caract_extra, nulo) {
     <div class="footer">
     <!--LOGIN BUTTON-->
     
-          <input type="submit" name="submit" value="Ingresar" class="button" />
+          <input type="submit" name="Ingresar" value="Ingresar" class="button" />
        
          <!--END LOGIN BUTTON-->
     </div>
@@ -129,7 +129,21 @@ function ValidarPass(campo, caract_extra, nulo) {
 <!--END WRAPPER-->
 
 <!--GRADIENT--><div class="gradient"></div><!--END GRADIENT-->
+<? php
 
+error_reporting(0);
+
+
+            if (isset($_POST['Ingresar'] )) {              
+
+                  
+
+
+
+              require ("index_1.php");
+            }   
+
+?>
 
 
 </body>

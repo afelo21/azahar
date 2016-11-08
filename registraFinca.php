@@ -41,7 +41,7 @@
 		     				</td>
 		     				<td>
 		     					<select name="Secado" type = "text" id="Secado">
-									   	   <option selected value="NO DEF"> Elige una opción </option>
+									   	   <option selected value="NO DEFINIDO"> Elige una opción </option>
 									       <option value='AL SOL'>AL SOL</option> 
 									       <option value='A LA SOMBRA'>A LA SOMBRA</option> 
 									    
@@ -74,7 +74,7 @@
 		     				</td>
 		     				<td> 		     				
 								<select name="tipoFermentacion" type = "text" id="tipoFermentacion">
-									   	   <option selected value="NO DEF"> Elige una opción </option>
+									   	   <option selected value="NO DEFINIDO"> Elige una opción </option>
 									       <option value='NORMAL'>NORMAL</option> 
 									       <option value='ANORMAL'>ANORMAL</option> 
 									    
@@ -127,7 +127,7 @@
 		     		</tr>	
 		     				<tr>
 		     					<td>
-		     						<label for id="Area"><b>(*)Area (mts2):</b></label>
+		     						<label for id="Area"><b>(*)Area (# hectáreas):</b></label>
 		     					</td>
 		     					<td>
 		     							<input type="text" name="Area" class="form-control" id="Area" />

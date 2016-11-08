@@ -15,7 +15,7 @@
   </head>
   
 	<body>
-		<center><a href="http://localhost/azahar/"><img src="http://azaharcoffee.com/sites/default/files/logo.png"></a> </center>	
+		<center><a href="http://localhost/azahar/index_1.php"><img src="http://azaharcoffee.com/sites/default/files/logo.png"></a> </center>	
 		<center><b><h2><i>AZAHAR COFFEE</i></h2></b></center>
 		
 
@@ -58,7 +58,7 @@
 			$conexion = mysql_connect($host, $user, $pwd) or die ("Error de conexion.");
 			mysql_select_db($db,$conexion) or die ("no se pudo conectar a la bd");	
 
-			$query1 = "select (select count(IdFinca) from fincas where TipoSecado='Secado al sol')/ count(idFinca)*100 as sol from fincas;";
+			$query1 = "select (select count(IdFinca) from fincas where TipoSecado='al sol')/ count(idFinca)*100 as sol from fincas;";
 			$resultado1 =  mysql_query($query1);
 			
 
@@ -66,9 +66,10 @@
 			while ($fila=mysql_fetch_array($resultado1)) {
 				
 				echo "<tr>";
-				echo "<center><h1><td><b> $fila[sol]% </h1></b></td></center> <br>";
+				echo "<center><h1><td><b>".$fila['sol']."% </h1></b></td></center> <br>";
 				echo "</tr>";
 
+				
 			}	
 
 	?>
@@ -94,6 +95,30 @@
 				
 				echo "<tr>";
 				echo "<center><h1><td><b> $fila[PromedioMujeres]% </h1></b></td></center> <br>";
+				echo "</tr>";
+
+			}	
+
+		?>
+
+			<center><h4><b>4.Porcentaje de fincas con produccion anual menor a 4.000 libras:</b></h4></center>
+		<?php 
+
+			error_reporting(0);
+
+			include 'conect.php';			
+			$conexion = mysql_connect($host, $user, $pwd) or die ("Error de conexion.");
+			mysql_select_db($db,$conexion) or die ("no se pudo conectar a la bd");	
+
+			$query1 = "select (select count(fincas_IdFinca) from produccionanual where ProduccionAnualTotal<4000)/ count(fincas_IdFinca)*100 as porcentajeProd from produccionanual;";
+			$resultado1 =  mysql_query($query1);
+			
+
+			
+			while ($fila=mysql_fetch_array($resultado1)) {
+				
+				echo "<tr>";
+				echo "<center><h1><td><b> $fila[porcentajeProd]% </h1></b></td></center> <br>";
 				echo "</tr>";
 
 			}	

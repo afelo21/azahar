@@ -11,9 +11,25 @@ error_reporting(0);
 
 			while ($fila=mysql_fetch_array($resultado)) {
 				
-					echo "<tr>";
-					echo "<td> $fila[IdVariedad] </td> <td> $fila[Nombre] </td> <br>";
-					echo "</tr>";
+				echo "
+
+													<table width=\"20%\" border = \"1\">
+														<tr>
+															<td><b><center>IdVariedad</center></b></td>
+															<td><b><center>Nombre</center></b></td>	
+
+														</tr>
+
+														<tr>
+															<td><center><b>".$fila['IdVariedad']."</b></center></td>
+															<td><center>".$fila['Nombre']."</center></td>
+															
+														</tr>
+													</table> 	
+
+													";
+
+					
 				
 
 			}	
