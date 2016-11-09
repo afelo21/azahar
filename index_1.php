@@ -44,6 +44,12 @@
 					</form>
 				</center>
 
+				<center> 	
+					<form action = "pruebasUnitarias.php" method = "post">
+						<input type = "submit" class="btn btn-success" value = "Pruebas Unitarias">
+					</form>
+				</center>
+
 
 				
 		<?php 

@@ -81,8 +81,6 @@ $resultado=mysql_query($consulta);
                         <input type="text" name="descripcionCAfe" class="form-control" id="descripcionCAfe" />
                     </td>
                 </tr>
-
-
                 
                 <tr>
 
