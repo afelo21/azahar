@@ -44,6 +44,7 @@
 									   	   <option selected value="NO DEFINIDO"> Elige una opción </option>
 									       <option value='AL SOL'>AL SOL</option> 
 									       <option value='A LA SOMBRA'>A LA SOMBRA</option> 
+									       <option value='MECANICA'>MECANICA</option> 
 									    
 							   </select>
 		     				</td>
@@ -76,7 +77,10 @@
 								<select name="tipoFermentacion" type = "text" id="tipoFermentacion">
 									   	   <option selected value="NO DEFINIDO"> Elige una opción </option>
 									       <option value='NORMAL'>NORMAL</option> 
-									       <option value='ANORMAL'>ANORMAL</option> 
+									       <option value='ALCOHOLICA'>ALCOHOLICA</option> 
+									       <option value='LACTICA'>LACTICA</option>
+									       <option value='METANICA'>METANICA</option> 
+
 									    
 							   </select>
 

@@ -62,18 +62,26 @@ try {
 								$user = $_POST['user'];
 								$pass= $_POST['pass'];
 
-								$consulta = "Select * from login where usuario = '".$user."'";
-								$resultado = mysql_query($consulta);
-								$ver = mysql_fetch_array($resultado);
+								$verifica = strlen($user)*strlen($pass);
 
-								if ($ver != NULL) {
+								if ($verifica>0) {
+
+										$consulta = "Select * from login where usuario = '".$user."'";
+										$resultado = mysql_query($consulta);
+										$ver = mysql_fetch_array($resultado);
+
+										if ($ver != NULL) {
 									
-									echo "<center>"."<h4>"."<b>"."<font color=Green>"."Usuario correcto, Login correcto"."</font>"."</b>"."</h4>"."</center>";
+											echo "<center>"."<h4>"."<b>"."<font color=Green>"."Usuario correcto, Login correcto"."</font>"."</b>"."</h4>"."</center>";
 									
+										}else{
+											echo "<center>"."<h4>"."<b>"."<font color=red>"."Usuario no registrado"."</font>"."</b>"."</h4>"."</center>";										
+										}
 								}else{
-									echo "<center>"."<h4>"."<b>"."<font color=red>"."Usuario no registrado"."</font>"."</b>"."</h4>"."</center>";										
-								}
-				}
+										echo "<center>"."<h4>"."<b>"."<font color=red>"."Existen campos vacios"."</font>"."</b>"."</h4>"."</center>";
+								}				
+									
+				}			
 
 
             } else {
@@ -131,26 +139,28 @@ try {
             	if (isset($_POST['consultarP'] )){							
 						
 								$doc = $_POST['doc'];
-								$consulta = "Select * from productores where IdProductor = '".$doc."'";
-								$resultado = mysql_query($consulta);
-								$ver = mysql_fetch_array($resultado);
 
-								if ($ver != NULL) {
+								$verifica = strlen($doc);
+								if ($verifica>0) {
 
-										echo "<center>"."<h4>"."<b>"."<font color=Green>"."El nombre del productor es"."</font>"."</b>"."</h4>"."</center>";														
-										echo "<tr>";
-										echo "<center><h4><td><b>".$ver['Nombre']."</h4></b></td></center> <br>";
-										echo "</tr>";
+										
+									$consulta = "Select * from productores where IdProductor = '".$doc."'";
+									$resultado = mysql_query($consulta);
+									$ver = mysql_fetch_array($resultado);
 
-									
-									
-									
+									if ($ver != NULL) {
 
-									
-									
+											echo "<center>"."<h4>"."<b>"."<font color=Green>"."El nombre del productor es:"."</font>"."</b>"."</h4>"."</center>";														
+											echo "<tr>";
+											echo "<center><h4><td><b>".$ver['Nombre']."</h4></b></td></center> <br>";
+											echo "</tr>";
+																						
+									}else{
+										echo "<center>"."<h4>"."<b>"."<font color=red>"."El productor no se encuentra creado"."</font>"."</b>"."</h4>"."</center>";	
+									}
+
 								}else{
-									echo "<center>"."<h4>"."<b>"."<font color=red>"."El productor no se encuentra creado"."</font>"."</b>"."</h4>"."</center>";	
-
+									echo "<center>"."<h4>"."<b>"."<font color=red>"."Existen campos vacios"."</font>"."</b>"."</h4>"."</center>";
 
 								}
 				}
