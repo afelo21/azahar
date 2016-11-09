@@ -37,17 +37,21 @@
 
     	 <?php	  	
 
-			error_reporting(0);
+		error_reporting(0);
 
+    	 try {
+			include 'conect.php';
+			if($conexion = mysql_connect($host, $user, $pwd)){
+				try{
+					if(mysql_select_db($db,$conexion)){
 
+						//Codigo a ejecutar
 						if (isset($_POST['btn2'] )) {							
 
 							$nombreFinca = $_POST['nombreFinca'];
 							$verifica = strlen($nombreFinca);
 
-								include 'conect.php';			
-								$conexion = mysql_connect($host, $user, $pwd) or die ("Error de conexion.");
-								mysql_select_db($db,$conexion) or die ("no se pudo conectar a la bd");
+								
 								$query = "SELECT * FROM fincas where Nombre like  '%$nombreFinca%'"; 
 								$resultado = mysql_query($query);
 								$ver = mysql_fetch_array($resultado);
@@ -90,11 +94,26 @@
 											echo "<center>"."<h5>"."<b>"."<font color=red>"."(Presione 2 (dos) veces el boton Consultar Finca para listar todas las fincas registradas)"."</font>"."</b>"."</h5>"."</center>";	
 											}					
 						} 
-									
-						
 
 
-						
+
+					}
+					else{
+				throw new Exception("No se puede conectar a la BD");
+					}
+				}
+				catch(Exception $e1){
+					echo $e1->getMessage();
+				}
+			}
+			else{
+				throw new Exception("No se puede conectar");
+			}	
+		}
+		catch(Exception $e2){
+			echo $e2->getMessage();
+		}
+			
 
 
 		?>		

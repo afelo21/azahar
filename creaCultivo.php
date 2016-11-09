@@ -121,7 +121,7 @@ $resultado=mysql_query($consulta);
                         if (isset($_POST['creaCultivo'] )) {                            
 
                             
-                            require ("crearCultivo.php");
+                            require "crearCultivo.php";
                         }       
         ?>
 
