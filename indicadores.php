@@ -29,7 +29,7 @@
 			include 'conect.php';	
 
 			//Prueba para eliminacion de defectos
-			try {
+			/*try {
 				if($conexion = mysql_connect($host, $user, $pwd)){
 
 					mysql_select_db($db,$conexion) or die ('no se pudo conectar a la bd');	
@@ -56,10 +56,10 @@
 			catch(Exception $e){
     			echo $e->getMessage();
 			}
-
+			*/
 			//Termina prueba de eliminacion de defectos
 
-			/*$conexion = mysql_connect($host, $user, $pwd) or die ("Error de conexion.");
+			$conexion = mysql_connect($host, $user, $pwd) or die ("Error de conexion.");
 			mysql_select_db($db,$conexion) or die ("no se pudo conectar a la bd");	
 
 			$query = "select count(*) as area from AreaCultivada where AreaCultivo < 2.0;";
@@ -75,7 +75,7 @@
 				echo "</tr>";
 
 			}	
-			*/
+			
 
 
 	?>
