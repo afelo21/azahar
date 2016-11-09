@@ -1,3 +1,7 @@
+<!DOCTYPE html>
+<html>
+<body>
+
 <?php
 	$idVariedad = $_POST['idVariedad'];
 	$nombre = $_POST['Nombre'];
@@ -19,3 +23,8 @@
 	
 
 ?>
+
+</body>
+</html>
+
+

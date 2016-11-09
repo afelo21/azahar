@@ -1,3 +1,7 @@
+<!DOCTYPE html>
+<html>
+<body>
+
 <?php
 	$areaCultivo = $_POST['areaCultivo'];
 	$numArboles = $_POST['numArboles'];
@@ -25,6 +29,12 @@
 	
 
 ?>
+
+</body>
+</html>
+
+
+
 
 
 
