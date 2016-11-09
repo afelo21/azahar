@@ -177,7 +177,7 @@
 
 						if (isset($_POST['guardarFinca'] )) {							
 
-							require ("registrarFinca.php");
+							require "registrarFinca.php";
 						}		
 		?>	
 
