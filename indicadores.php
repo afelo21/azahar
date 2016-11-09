@@ -26,39 +26,7 @@
 
 			error_reporting(0);
 
-			include 'conect.php';	
-
-			//Prueba para eliminacion de defectos
-			/*try {
-				if($conexion = mysql_connect($host, $user, $pwd)){
-
-					mysql_select_db($db,$conexion) or die ('no se pudo conectar a la bd');	
-
-					$query = 'select count(*) as area from AreaCultivada where AreaCultivo < 2.0;';
-					$resultado = mysql_query($query);
-
-					// echo $resultado;
-
-
-					while ($fila=mysql_fetch_array($resultado)) {
-				
-						echo '<tr>';
-						echo '<center><h1><td><b> $fila[area] </h1></b></td></center> <br>';
-						echo '</tr>';
-
-					}	
-				}
-				else{
-					throw new Exception('Unable to connect');
-				}
-			}
-
-			catch(Exception $e){
-    			echo $e->getMessage();
-			}
-			*/
-			//Termina prueba de eliminacion de defectos
-
+			include 'conect.php';			
 			$conexion = mysql_connect($host, $user, $pwd) or die ("Error de conexion.");
 			mysql_select_db($db,$conexion) or die ("no se pudo conectar a la bd");	
 
@@ -75,7 +43,6 @@
 				echo "</tr>";
 
 			}	
-			
 
 
 	?>
@@ -88,19 +55,19 @@
 			error_reporting(0);
 
 			include 'conect.php';			
-			$conexion = mysql_connect($host, $user, $pwd) or die ('Error de conexion.');
-			mysql_select_db($db,$conexion) or die ('no se pudo conectar a la bd');	
+			$conexion = mysql_connect($host, $user, $pwd) or die ("Error de conexion.");
+			mysql_select_db($db,$conexion) or die ("no se pudo conectar a la bd");	
 
-			$query1 = 'select (select count(IdFinca) from fincas where TipoSecado='al sol')/ count(idFinca)*100 as sol from fincas;';
+			$query1 = "select (select count(IdFinca) from fincas where TipoSecado='al sol')/ count(idFinca)*100 as sol from fincas;";
 			$resultado1 =  mysql_query($query1);
 			
 
 			
 			while ($fila=mysql_fetch_array($resultado1)) {
 				
-				echo '<tr>';
-				echo '<center><h1><td><b>".$fila['sol']."% </h1></b></td></center> <br>';
-				echo '</tr>';
+				echo "<tr>";
+				echo "<center><h1><td><b>".$fila['sol']."% </h1></b></td></center> <br>";
+				echo "</tr>";
 
 				
 			}	
@@ -116,19 +83,19 @@
 			error_reporting(0);
 
 			include 'conect.php';			
-			$conexion = mysql_connect($host, $user, $pwd) or die ('Error de conexion.');
-			mysql_select_db($db,$conexion) or die ('no se pudo conectar a la bd');	
+			$conexion = mysql_connect($host, $user, $pwd) or die ("Error de conexion.");
+			mysql_select_db($db,$conexion) or die ("no se pudo conectar a la bd");	
 
-			$query1 = 'select avg(PorcentajeMujeres) as PromedioMujeres  from numerotrabajadores;';
+			$query1 = "select avg(PorcentajeMujeres) as PromedioMujeres  from numerotrabajadores;";
 			$resultado1 =  mysql_query($query1);
 			
 
 			
 			while ($fila=mysql_fetch_array($resultado1)) {
 				
-				echo '<tr>';
-				echo '<center><h1><td><b> $fila[PromedioMujeres]% </h1></b></td></center> <br>';
-				echo '</tr>';
+				echo "<tr>";
+				echo "<center><h1><td><b> $fila[PromedioMujeres]% </h1></b></td></center> <br>";
+				echo "</tr>";
 
 			}	
 
@@ -140,19 +107,19 @@
 			error_reporting(0);
 
 			include 'conect.php';			
-			$conexion = mysql_connect($host, $user, $pwd) or die ('Error de conexion.');
+			$conexion = mysql_connect($host, $user, $pwd) or die ("Error de conexion.");
 			mysql_select_db($db,$conexion) or die ("no se pudo conectar a la bd");	
 
-			$query1 = 'select (select count(fincas_IdFinca) from produccionanual where ProduccionAnualTotal<4000)/ count(fincas_IdFinca)*100 as porcentajeProd from produccionanual;';
+			$query1 = "select (select count(fincas_IdFinca) from produccionanual where ProduccionAnualTotal<4000)/ count(fincas_IdFinca)*100 as porcentajeProd from produccionanual;";
 			$resultado1 =  mysql_query($query1);
 			
 
 			
 			while ($fila=mysql_fetch_array($resultado1)) {
 				
-				echo '<tr>';
-				echo '<center><h1><td><b> $fila[porcentajeProd]% </h1></b></td></center> <br>';
-				echo '</tr>';
+				echo "<tr>";
+				echo "<center><h1><td><b> $fila[porcentajeProd]% </h1></b></td></center> <br>";
+				echo "</tr>";
 
 			}	
 

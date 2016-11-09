@@ -1,7 +1,3 @@
-<!DOCTYPE html>
-<html>
-<body>
-
 <?php
 	$areaCultivo = $_POST['areaCultivo'];
 	$numArboles = $_POST['numArboles'];
@@ -26,10 +22,9 @@
 			
 			echo "<center>"."<b>"."<font color=red>"." (*) Estos campos son Obligatorios"."</font>"."</b>"."</center>";
 		}
-?>
+	
 
-</body>
-</html>
+?>
 
 
 

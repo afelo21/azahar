@@ -1,10 +1,10 @@
 <?php
 error_reporting(0);
-include 'conect.php';			
+include 'conect.php';           
 $conexion = mysql_connect($host, $user, $pwd) or die ("Error de conexion.");
 mysql_select_db($db,$conexion) or die ("no se pudo conectar a la bd");
 $consulta= "select * from variedades";
-$resultado=mysql_query($consulta);	
+$resultado=mysql_query($consulta);  
 
 ?>
 
@@ -91,19 +91,19 @@ $resultado=mysql_query($consulta);
                     </td>
                     <td>
                         <select name="variedad" type = "text" id="variedad">
-									   	   <option selected value="NO DEFINIDO"> Elige una opción </option>
+                                           <option selected value="NO DEFINIDO"> Elige una opción </option>
 
-								<?php
-									error_reporting(0);
+                                <?php
+                                    error_reporting(0);
 
-										while ($fila=mysql_fetch_row($resultado)) {
+                                        while ($fila=mysql_fetch_row($resultado)) {
 
-											echo "<option value= '".$fila['0']."'>".$fila['1']."</option>";
-										}									
-								?>	   	
-									      
-									    
-						</select>
+                                            echo "<option value= '".$fila['0']."'>".$fila['1']."</option>";
+                                        }                                   
+                                ?>      
+                                          
+                                        
+                        </select>
                     </td>
                 </tr>
 
@@ -115,17 +115,17 @@ $resultado=mysql_query($consulta);
         <br>
 
     </div>
-    <?php	  	
+    <?php       
 
-			error_reporting(0);
+            error_reporting(0);
 
 
-						if (isset($_POST['creaCultivo'] )) {							
+                        if (isset($_POST['creaCultivo'] )) {                            
 
-							
-							require 'crearCultivo.php';
-						}		
-		?>
+                            
+                            require ("crearCultivo.php");
+                        }       
+        ?>
 
 
 
