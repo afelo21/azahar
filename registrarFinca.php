@@ -56,6 +56,7 @@
 							mysql_query("INSERT INTO fincas VALUES ( NULL,'$Nombre','$Administrador', '$Direccion','$Telefono','$Fundacion',     '$Departamento', '$Municipio', '$Vereda', '$Area', '$Altitud', '$Secado', '$tiempoSecado', '$tipoFermentacion', '$tiempoFermentacion', '$Hombres', '$Mujeres','$history', '$Productor')");
 
 							echo "<center>"."<b>"."<font color=green>"."Se ha guardado exitosamente"."</font>"."</b>"."</center>";
+							braek;
 
 						}	
 						else {
