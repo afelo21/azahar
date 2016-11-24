@@ -3,6 +3,31 @@
 <head>
 	<title>REGISTRANDO TU FINCA</title>
 </head>
+
+	<script> 
+
+	function solonumeros(e){
+
+		key = e.keyCode || e.which;
+		teclado=String.fromCharCode(key);
+		numeros = "0123456789";
+		especiales = "8-37-38-46";
+		teclado_especial=false;
+
+		for (var i in especiales){
+
+			if (key==especiales[i]) {
+
+				teclado_especial=true;
+			}
+		}
+
+		if (numeros.indexOf(teclado)== -1 && !teclado_especial) {
+			return false;
+		}
+	}
+
+	</script>
 	<body>  
 
 	 <link href="http://getbootstrap.com/2.3.2/assets/css/bootstrap.css" rel="stylesheet">
@@ -27,7 +52,7 @@
 		     				</td>
 
 		     				<td>
-		     					<input type="text" name="Altitud" class="form-control" id="Altitud" />
+		     					<input type="text" name="Altitud" class="form-control" id="Altitud" onkeypress="return solonumeros(event)" />
 		     				</td>
 		     		<tr>
 		     				<td>
@@ -54,13 +79,13 @@
 		     					<label for id="Telefono"><b>Telefono Finca:</b></label>
 		     				</td>
 		     				<td>
-		     					<input type="text" name="Telefono" class="form-control" id="Telefono" />
+		     					<input type="text" name="Telefono" class="form-control" id="Telefono" onkeypress="return solonumeros(event)"/>
 		     				</td>
 		     				<td>
 		     					<label for id="tiempoSecado"><b>(*)Tiempo de secado (# dias):</b></label>
 		     				</td>
 		     				<td>
-		     					<input type="text" name="tiempoSecado" class="form-control" id="tiempoSecado" />
+		     					<input type="text" name="tiempoSecado" class="form-control" id="tiempoSecado" onkeypress="return solonumeros(event)"/>
 		     				</td>
 		     		</tr>
 		     		<tr>
@@ -98,7 +123,7 @@
 		     					<label for id="tiempoFermentacion"><b>(*)Tiempo de fermentación (# dias):</b></label>
 		     				</td>
 		     				<td>
-		     					<input type="text" name="tiempoFermentacion" class="form-control" id="tiempoFermentacion" />
+		     					<input type="text" name="tiempoFermentacion" class="form-control" id="tiempoFermentacion" onkeypress="return solonumeros(event)"/>
 		     				</td>
 		     		</tr>	
 		     	    <tr>
@@ -112,7 +137,7 @@
 		     					<label for id="Hombres"><b>(*)# Trabajadores Hombres:</b></label>
 		     				</td>
 		     				<td>
-		     					<input type="text" name="Hombres" class="form-control" id="Hombres" />
+		     					<input type="text" name="Hombres" class="form-control" id="Hombres" onkeypress="return solonumeros(event)"/>
 		     				</td>	     				
 		     		</tr>	
 		     		<tr>
@@ -126,7 +151,7 @@
 		     					<label for id="Mujeres"><b>(*)# Trabajadoras Mujeres:</b></label>
 		     				</td>
 		     				<td>
-		     					<input type="text" name="Mujeres" class="form-control" id="Mujeres" />
+		     					<input type="text" name="Mujeres" class="form-control" id="Mujeres" onkeypress="return solonumeros(event)"/>
 		     				</td>
 		     		</tr>	
 		     				<tr>
@@ -134,13 +159,13 @@
 		     						<label for id="Area"><b>(*)Area (# hectáreas):</b></label>
 		     					</td>
 		     					<td>
-		     							<input type="text" name="Area" class="form-control" id="Area" />
+		     							<input type="text" name="Area" class="form-control" id="Area" onkeypress="return solonumeros(event)" />
 		     					</td>
 		     					<td>
 		     						<label for id="Productor"><b>(*)# Doc del Productor:</b></label>
 		     					</td>
 		     					<td>			     				
-		     						<input type="text" name="Productor" class="form-control" id="Productor" />		
+		     						<input type="text" name="Productor" class="form-control" id="Productor" onkeypress="return solonumeros(event)"/>		
 		     					
 		     					</td>
 

@@ -43,6 +43,7 @@ error_reporting(0);
 				echo "<center><h1><td><b> $fila[area] </h1></b></td></center> <br>";
 				echo "</tr>";
 
+				
 			}	
 
 
@@ -58,10 +59,13 @@ error_reporting(0);
 			$query1 = "select (select count(IdFinca) from fincas where TipoSecado='al sol')/ count(idFinca)*100 as sol from fincas;";
 			$resultado1 =  mysql_query($query1);			
 			while ($fila=mysql_fetch_array($resultado1)) {
-				
+
+				$sol =(int) ("".$fila['sol']."");				
 				echo "<tr>";
-				echo "<center><h1><td><b>".$fila['sol']."% </h1></b></td></center> <br>";
+				echo "<center><h1><td><b>$sol% </h1></b></td></center> <br>";
 				echo "</tr>";
+				
+				
 
 				
 			}	
@@ -78,9 +82,10 @@ error_reporting(0);
 			$query1 = "select avg(PorcentajeMujeres) as PromedioMujeres  from numerotrabajadores;";
 			$resultado1 =  mysql_query($query1);			
 			while ($fila=mysql_fetch_array($resultado1)) {
-				
+
+				$mujeres = (int)("".$fila[PromedioMujeres]."");
 				echo "<tr>";
-				echo "<center><h1><td><b> $fila[PromedioMujeres]% </h1></b></td></center> <br>";
+				echo "<center><h1><td><b> $mujeres% </h1></b></td></center> <br>";
 				echo "</tr>";
 
 			}	
@@ -98,8 +103,9 @@ error_reporting(0);
 			
 			while ($fila=mysql_fetch_array($resultado1)) {
 				
+				$porcentaje = (int)("".$fila[porcentajeProd]."");
 				echo "<tr>";
-				echo "<center><h1><td><b> $fila[porcentajeProd]% </h1></b></td></center> <br>";
+				echo "<center><h1><td><b> $porcentaje% </h1></b></td></center> <br>";
 				echo "</tr>";
 
 			}	

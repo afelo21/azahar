@@ -3,6 +3,32 @@
 <head>
 	<title>AZAHAR COFFEE</title>
 </head>
+<script> 
+
+	function solonumeros(e){
+
+		key = e.keyCode || e.which;
+		teclado=String.fromCharCode(key);
+		numeros = "0123456789";
+		especiales = "8-37-38-46";
+		teclado_especial=false;
+
+		for (var i in especiales){
+
+			if (key==especiales[i]) {
+
+				teclado_especial=true;
+			}
+		}
+
+		if (numeros.indexOf(teclado)== -1 && !teclado_especial) {
+			return false;
+		}
+	}
+
+	</script>
+
+
 	<body>  
 	 <link href="http://getbootstrap.com/2.3.2/assets/css/bootstrap.css" rel="stylesheet">
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -69,7 +95,7 @@
 	     					<label for="idProductor"><b>(*)Documento de Id:</b></label>
 	     				</td>
 	     					<td>
-	     						<input type="text" name="idProductor" class="form-control" id="idProductor" />
+	     						<input type="text" name="idProductor" class="form-control" id="idProductor" onkeypress="return solonumeros(event)"/>
 	     					</td>
 	     				<tr>
 	     					<td>
@@ -84,7 +110,7 @@
 	     						<label for=id="Telefono"><b>(*)Telefono:</b></label>
 	     					</td>
 	     						<td>
-	     							<input type="text" name="Telefono" class="form-control" id="Telefono" />
+	     							<input type="text" name="Telefono" class="form-control" id="Telefono" onkeypress="return solonumeros(event)"/>
 	     						</td>
 	     				</tr>	
 	     				<tr>

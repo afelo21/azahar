@@ -15,22 +15,34 @@ try {
 					$Nombre = $_POST['Nombre'];
 					$Telefono = $_POST['Telefono'];
 					$Direccion = $_POST['Direccion'];
-
-	
+					
 
 					$verifica = strlen($idProductor) * strlen($Nombre) * strlen($Telefono) * strlen($Direccion);
 
-					if ($verifica>0) {
-		   
-						mysql_query("INSERT INTO productores VALUES ('$idProductor','$Nombre','$Telefono', '$Direccion')");
-						echo "<b>"."Se ha guardado exitosamente"."</b>";
+					$int = (int) $idProductor;
+					$query = "SELECT * from productores where IdProductor = '".$int."'"; 
+					$resultado = mysql_query($query);
+					$ver = mysql_fetch_array($resultado);
 
-					}	
+				if($verifica>0){	
+
+						if ($ver!=NULL) {
+		   
+							echo "<center>"."<b>"." El Documento de ID ingresado pertenece a un productor ya existente"."</b>"."</center>";
+							break;
+
+							}	
 					else {
-			
-						echo "<b>"." (*) Por favor ingrese todos los valores requeridos"."</b>";
+							mysql_query("INSERT INTO productores VALUES ('$idProductor','$Nombre','$Telefono', '$Direccion')");
+							echo "<b>"."Se ha guardado exitosamente"."</b>";
+							break;						
+							
 					}
+				}echo "<center>"."<b>"." (*) Estos campos son obligatorios"."</b>"."</center>";
 			}
+			
+
+
 			else{
 				throw new Exception("No se puede conectar a la BD");
 			}
@@ -48,10 +60,6 @@ catch(Exception $e2){
 }
 
 
-
-
-
-	
 
 ?>
 

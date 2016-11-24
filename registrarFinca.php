@@ -37,7 +37,7 @@
 
 	$verifica = strlen($Nombre)*strlen($Fundacion)*strlen($Direccion)*strlen($Departamento)*strlen($Municipio)*strlen($Area)*strlen($Altitud)*strlen($tiempoSecado)*strlen($tiempoFermentacion)*strlen($Hombres)*strlen($Mujeres)*strlen($Productor);
 
-	include 'conect.php';			
+			include 'conect.php';			
 			$conexion = mysql_connect($host, $user, $pwd) or die ("Error de conexion.");
 			mysql_select_db($db,$conexion) or die ("no se pudo conectar a la bd");
 
